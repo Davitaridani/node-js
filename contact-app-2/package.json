@@ -1,0 +1,16 @@
+{
+  "name": "contact-app-2",
+  "version": "1.0.0",
+  "description": "For Education",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmat Davit",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "validator": "^13.7.0",
+    "yargs": "^17.5.1"
+  }
+}

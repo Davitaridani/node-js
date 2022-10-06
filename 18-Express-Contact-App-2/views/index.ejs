@@ -1,0 +1,15 @@
+ 
+<h1 class="text-center">Halaman Home</h1>
+<h3> Hallo <%= nama %></h3>
+
+<h3>Daftar MHS</h3>
+<% if (mhs.length == 0) { %>
+	<p>Data Mhs Tidak Ada</p>	 
+<% } else { %>
+	<% mhs.forEach(m => { %>
+	<ul>
+		<li>Nama : <%= m.nama %>  </li>
+		<li>Alamat : <%= m.alamat %> 		 </li>
+	</ul>	
+<% }) %>
+<% } %> 
