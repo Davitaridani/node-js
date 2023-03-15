@@ -12,7 +12,7 @@ const readline = require("readline");
 // }
 
 // ===== Menuliskan File Secara Asynchronous =============
-// fs.writeFile("data/test.txt", "Hello Word Secara Asynchronous", (err) => {
+// fs.writeFile("data/test.txt", "Hello Word Davit Ari Dani", (err) => {
 //   console.log(err);
 // });
 
@@ -55,10 +55,10 @@ const readline = require("readline");
 
 // ================ DOCS READLINE NODE JS ===================
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+// });
 
 //  ========== Event Line ==========
 // ==> Event'line'dipancarkan setiap kali inputaliran menerima input akhir baris
@@ -79,6 +79,6 @@ const rl = readline.createInterface({
 // });
 
 // ============== rl.question ==============
-rl.question("Masukan Nama Anda ? ", (answer) => {
-  console.log(`Oh, so your favorite food is ${answer}`);
-});
+// rl.question("Masukan Nama Anda : ", (answer) => {
+//   console.log(`Terima Kasih ${answer}`);
+// });

@@ -5,7 +5,7 @@ const port = 3000;
 const expressLayouts = require("express-ejs-layouts");
 const morgan = require("morgan");
 
-// Gunakan NPM EJS
+// Set Up NPM View Engine EJS
 app.set("view engine", "ejs");
 // Third-party MidleWare
 app.use(expressLayouts);
@@ -47,10 +47,6 @@ app.get("/contact", (request, response) => {
     layout: "layouts/main-layouts",
     title: "Halaman Contact",
   });
-});
-
-app.get("/coba", (request, response) => {
-  response.render("coba");
 });
 
 // Midleware

@@ -1,5 +1,3 @@
-// // console.log("Hallo davit");
-
 const cetakNama = (nama) => `hallo nama saya ${nama}`;
 
 const umur = 22;

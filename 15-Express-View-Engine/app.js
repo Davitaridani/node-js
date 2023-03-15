@@ -4,18 +4,18 @@ const app = express();
 const port = 3000;
 const expressLayouts = require("express-ejs-layouts");
 
-// Gunakan NPM EJS
+// Set Up NPM View Engine EJS
 app.set("view engine", "ejs");
 app.use(expressLayouts);
 
-app.get("/", (request, response) => {
+app.get("/", (req, res) => {
   const mhs = [
     { nama: "Ahmat", alamat: "Jember" },
     { nama: "Davit", alamat: "Lumajang" },
     { nama: "Ari", alamat: "Bandung" },
   ];
 
-  response.render("index", {
+  res.render("index", {
     layout: "layouts/main-layouts",
     nama: "Ahmat Davit",
     title: "Halaman Home",
@@ -23,22 +23,18 @@ app.get("/", (request, response) => {
   });
 });
 
-app.get("/about", (request, response) => {
-  response.render("about", {
+app.get("/about", (req, res) => {
+  res.render("about", {
     layout: "layouts/main-layouts",
     title: "Halaman About",
   });
 });
 
-app.get("/contact", (request, response) => {
-  response.render("contact", {
+app.get("/contact", (req, res) => {
+  res.render("contact", {
     layout: "layouts/main-layouts",
     title: "Halaman Contact",
   });
-});
-
-app.get("/coba", (request, response) => {
-  response.render("coba");
 });
 
 // Midleware

@@ -13,9 +13,9 @@
 				</div>
 			<% } %>
 
-			<form action="/contact?_mthod=PUT" method="post">
-				<input type="hidden" name="_id" value="<%= contact.id %> ">
-				<input type="hidden" name="oldNama" value="<%= contact.nama %>">
+			<form method="post" action="/contact?_method=PUT">
+				<input type="hidden" name="_id" value="<%= contact._id %>">
+				<input type="hidden" name="oldNama" value="<%= contact.OldNama || contact.nama %>">
 				<div class="mb-3">
 					<label for="nama" class="form-label">Nama</label>
 					<input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" required value="<%= contact.nama %>">

@@ -133,6 +133,19 @@ app.post(
 //   }
 // });
 
+// Form Ubah/Edit Data Contact
+app.get("/contact/edit/:nama", async (req, res) => {
+  const contact = await Contact.findOne({
+    nama: req.params.nama,
+  });
+
+  res.render("edit-contact", {
+    title: "Form Ubah Data Contact",
+    layout: "layouts/main-layouts",
+    contact,
+  });
+});
+
 // Delete Contact
 app.delete("/contact", (req, res) => {
   Contact.deleteOne({ nama: req.body.nama }).then((result) => {
@@ -148,19 +161,6 @@ app.get("/contact/:nama", async (req, res) => {
   res.render("detailContact", {
     layout: "layouts/main-layouts",
     title: "Halaman Detail Contact",
-    contact,
-  });
-});
-
-// Form Ubah Data Contact
-app.get("/contact/edit/:nama", async (req, res) => {
-  const contact = await Contact.findOne({
-    nama: req.params.nama,
-  });
-
-  res.render("edit-contact", {
-    title: "Form Ubah Data Contact",
-    layout: "layouts/main-layouts",
     contact,
   });
 });

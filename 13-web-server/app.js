@@ -1,5 +1,5 @@
 const http = require("http");
-const fs = require("node:fs");
+const fs = require("fs");
 
 const renderHTML = (path, res) => {
   fs.readFile(path, (err, data) => {
@@ -30,5 +30,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3000, () => {
-  console.log("Server Anda Berjalan Di Port 3000");
+  console.log("Server Anda Berjalan Port 3000");
 });
